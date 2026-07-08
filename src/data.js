@@ -1,4 +1,8 @@
-// 集中所有資料 + 圖片路徑
+// 用 BASE_URL 前綴路徑 — GH Pages /clipy-clone/ 自動處理
+const B = import.meta.env.BASE_URL;
+
+export const img = (name) => `${B}images/${name}`;
+
 export const PLATFORMS = [
   { code: 'YT', label: 'YOUTUBE' },
   { code: 'TT', label: 'TIKTOK' },
@@ -22,7 +26,7 @@ export const SLIDES = [
     eyebrow: 'UGC 接案平台 · 創意換收入',
     titleLines: ['單支最高', { gold: 'US$900' }, '不問粉絲數'],
     subtitle: '不問粉絲數、訂閱數。只要你的影片有真實觀看，就有機會拿到平台級獎金。',
-    img: '/images/hero-1.jpg',
+    img: img('hero-1.jpg'),
     imgAlt: '創作者自拍影片',
     role: 'creator',
   },
@@ -31,7 +35,7 @@ export const SLIDES = [
     eyebrow: '品牌方專區 · 高效 UGC 行銷',
     titleLines: ['海量真實創作者', { gold: '按效果付費' }],
     subtitle: '3000+ 中文創作者覆蓋 9 大平台。每支影片以真實觀看數結算，告別一次性買斷。',
-    img: '/images/hero-3.jpg',
+    img: img('hero-3.jpg'),
     imgAlt: '品牌合作開箱',
     role: 'brand',
   },
@@ -40,7 +44,7 @@ export const SLIDES = [
     eyebrow: 'AI 輔助創作',
     titleLines: ['AI 腳本生成器', { gold: '一鍵產出 Hook' }],
     subtitle: '從 Hook 到 CTA，AI 為你寫好腳本框架。專注拍攝，剩下交給 Clipy。',
-    img: '/images/hero-2.png',
+    img: img('hero-2.png'),
     imgAlt: 'AI 創作工作室',
     role: 'creator',
   },
@@ -65,36 +69,11 @@ export const STATS = [
 ];
 
 export const FEATURE_TABS = [
-  {
-    id: 'team',
-    label: 'UGC 團隊管理',
-    desc: '建立創作者團隊、管理邀請碼，協同執行 UGC 專案',
-    panel: 'team',
-  },
-  {
-    id: 'kanban',
-    label: '任務管理看板',
-    desc: '一目了然所有進行中任務，狀態、獎金、截止日全部整合',
-    panel: 'kanban',
-  },
-  {
-    id: 'storage',
-    label: '多平台影片儲存',
-    desc: 'YT/TT/IG/XH/FB/X 影片統一管理，再也不會找不到素材',
-    panel: 'storage',
-  },
-  {
-    id: 'script',
-    label: 'AI 腳本生成',
-    desc: '輸入主題，AI 立刻給你 Hook + Body + CTA 完整腳本',
-    panel: 'script',
-  },
-  {
-    id: 'calendar',
-    label: '內容行事曆',
-    desc: '排程發布、自動提醒，團隊協作不再漏發',
-    panel: 'calendar',
-  },
+  { id: 'team',     label: 'UGC 團隊管理', desc: '建立創作者團隊、管理邀請碼，協同執行 UGC 專案', panel: 'team' },
+  { id: 'kanban',   label: '任務管理看板', desc: '一目了然所有進行中任務，狀態、獎金、截止日全部整合', panel: 'kanban' },
+  { id: 'storage',  label: '多平台影片儲存', desc: 'YT/TT/IG/XH/FB/X 影片統一管理，再也不會找不到素材', panel: 'storage' },
+  { id: 'script',   label: 'AI 腳本生成', desc: '輸入主題，AI 立刻給你 Hook + Body + CTA 完整腳本', panel: 'script' },
+  { id: 'calendar', label: '內容行事曆', desc: '排程發布、自動提醒，團隊協作不再漏發', panel: 'calendar' },
 ];
 
 export const STEPS = [
@@ -105,17 +84,17 @@ export const STEPS = [
 ];
 
 export const REASONS = [
-  { img: '/images/reason-multi.jpg', title: '多平台支持', desc: '覆蓋 9 大主流社群平台，從 YouTube 到小紅書，台前幕後一站搞定。' },
-  { img: '/images/reason-ai.jpg',    title: 'AI 輔助創作', desc: 'AI 腳本生成器 + AI 標題優化，讓你把時間花在拍片而不是寫腳本。' },
-  { img: '/images/reason-trans.jpg', title: '透明獎金制度', desc: '所有階梯、規則、結算天數公開透明，沒有隱藏條款。' },
-  { img: '/images/reason-high.jpg',  title: '高額單支獎金', desc: '單支最高 US$900，是同類平台的 3-5 倍。讓好內容拿到對的報酬。' },
+  { img: img('reason-multi.jpg'), title: '多平台支持', desc: '覆蓋 9 大主流社群平台，從 YouTube 到小紅書，台前幕後一站搞定。' },
+  { img: img('reason-ai.jpg'),    title: 'AI 輔助創作', desc: 'AI 腳本生成器 + AI 標題優化，讓你把時間花在拍片而不是寫腳本。' },
+  { img: img('reason-trans.jpg'), title: '透明獎金制度', desc: '所有階梯、規則、結算天數公開透明，沒有隱藏條款。' },
+  { img: img('reason-high.jpg'),  title: '高額單支獎金', desc: '單支最高 US$900，是同類平台的 3-5 倍。讓好內容拿到對的報酬。' },
 ];
 
 export const TESTIMONIALS = [
   {
     name: 'Sarah Lin',
     handle: '@sarahl_creates',
-    avatar: '/images/avatar-1.jpg',
+    avatar: img('avatar-sarah.jpg'),
     text: '以前接案只能等品牌私訊，現在 Clipy 直接派任務。3 個月累積 US$2,400，重點是完全不用自己談價。',
     rating: 5,
     role: '美妝 / 開箱',
@@ -123,7 +102,7 @@ export const TESTIMONIALS = [
   {
     name: 'Mike Chen',
     handle: '@mikec_vlogs',
-    avatar: '/images/avatar-2.jpg',
+    avatar: img('avatar-mike.jpg'),
     text: 'AI 腳本超好用！我只要給主題方向，AI 就生出 Hook + 段落 + CTA，拍片速度直接翻倍。',
     rating: 5,
     role: '旅遊 / 日常',
@@ -131,7 +110,7 @@ export const TESTIMONIALS = [
   {
     name: 'Emma Wang',
     handle: '@emmaw_studio',
-    avatar: '/images/avatar-3.png',
+    avatar: img('avatar-emma.jpg'),
     text: '最愛「按觀看付費」這點。影片表現好就多拿，表現差也沒損失，比一次性買斷公平太多。',
     rating: 5,
     role: '3C / 評測',
@@ -139,10 +118,10 @@ export const TESTIMONIALS = [
 ];
 
 export const CONTENT_THUMBS = [
-  { img: '/images/thumb-1.jpg', tag: '美食',  views: '128K', payout: 'US$ 52', creator: '@cook_with_ava',   platform: 'TIKTOK' },
-  { img: '/images/thumb-2.jpg', tag: '美妝',  views: '342K', payout: 'US$ 138', creator: '@beauty_lab',       platform: 'INSTAGRAM' },
-  { img: '/images/thumb-3.jpg', tag: '旅遊',  views: '256K', payout: 'US$ 92',  creator: '@wanderlust_mike',  platform: 'YOUTUBE' },
-  { img: '/images/thumb-4.jpg', tag: '健身',  views: '189K', payout: 'US$ 76',  creator: '@fit_emma',         platform: 'YOUTUBE' },
+  { img: img('thumb-1.jpg'), tag: '美食',  views: '128K', payout: 'US$ 52', creator: '@cook_with_ava',   platform: 'TIKTOK' },
+  { img: img('thumb-2.jpg'), tag: '美妝',  views: '342K', payout: 'US$ 138', creator: '@beauty_lab',       platform: 'INSTAGRAM' },
+  { img: img('thumb-3.jpg'), tag: '旅遊',  views: '256K', payout: 'US$ 92',  creator: '@wanderlust_mike',  platform: 'YOUTUBE' },
+  { img: img('thumb-4.jpg'), tag: '健身',  views: '189K', payout: 'US$ 76',  creator: '@fit_emma',         platform: 'YOUTUBE' },
 ];
 
 export const FAQS = [
@@ -154,10 +133,10 @@ export const FAQS = [
 ];
 
 export const TEAM_MEMBERS = [
-  { name: 'Sarah L.', role: 'Creator', online: true },
-  { name: 'Mike C.',  role: 'Creator', online: true },
-  { name: 'Emma W.',  role: 'Creator', online: false },
-  { name: 'David K.', role: 'Manager', online: true },
+  { name: 'Sarah L.', role: 'Creator', online: true,  avatar: img('avatar-sarah.jpg') },
+  { name: 'Mike C.',  role: 'Creator', online: true,  avatar: img('avatar-mike.jpg') },
+  { name: 'Emma W.',  role: 'Creator', online: false, avatar: img('avatar-emma.jpg') },
+  { name: 'David K.', role: 'Manager', online: true,  avatar: img('avatar-david.jpg') },
 ];
 
 export const TASKS = [

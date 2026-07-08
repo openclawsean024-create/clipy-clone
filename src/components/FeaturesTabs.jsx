@@ -1,5 +1,13 @@
 import { useState } from 'react';
-import { FEATURE_TABS, TEAM_MEMBERS, TASKS, PLATFORMS } from '../data';
+import { FEATURE_TABS, TEAM_MEMBERS, TASKS, PLATFORMS, img } from '../data';
+
+// 4 個團隊成員各對應真實人臉
+const TEAM_AVATARS_FALLBACK = [
+  img('avatar-sarah.jpg'),  // Sarah L.
+  img('avatar-mike.jpg'),   // Mike C.
+  img('avatar-emma.jpg'),   // Emma W.
+  img('avatar-david.jpg'),  // David K.
+];
 
 function PanelTeam() {
   return (
@@ -18,9 +26,13 @@ function PanelTeam() {
         {TEAM_MEMBERS.map((m, i) => (
           <div key={i} className="text-center">
             <div className="relative inline-block">
-              <div className="h-16 w-16 rounded-full bg-gradient-to-br from-brand-200 to-brand-400 flex items-center justify-center text-xl font-bold text-brand-700 mx-auto">
-                {m.name[0]}
-              </div>
+              <img
+                src={m.avatar || TEAM_AVATARS_FALLBACK[i]}
+                alt={m.name}
+                className="h-16 w-16 rounded-full object-cover border-2 border-white shadow-sm mx-auto bg-slate-100"
+                loading="eager"
+                decoding="async"
+              />
               {m.online && (
                 <span className="absolute bottom-0 right-0 h-4 w-4 rounded-full bg-emerald-500 border-2 border-white"></span>
               )}

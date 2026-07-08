@@ -1,3 +1,5 @@
+const B = import.meta.env.BASE_URL;
+
 export default function Powerful() {
   return (
     <section id="powerful" className="py-16 sm:py-24 bg-white">
@@ -15,7 +17,7 @@ export default function Powerful() {
               <p className="mt-2 text-text-tertiary">觀看、收益、表現一目了然</p>
             </div>
             <div className="relative mt-6">
-              <img src="/images/dashboard.jpg" alt="成效儀表板" className="w-full h-56 object-cover opacity-90" loading="lazy"/>
+              <img src={`${B}images/dashboard.jpg`} alt="成效儀表板" className="w-full h-56 object-cover opacity-90" loading="eager" decoding="async"/>
               <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
               <div className="absolute bottom-6 left-8 right-8 grid grid-cols-3 gap-3">
                 <div className="bg-white/95 backdrop-blur rounded-xl p-3 shadow-lg">
@@ -41,7 +43,7 @@ export default function Powerful() {
               <p className="mt-2 text-text-tertiary">從主題到完整腳本，一鍵產出</p>
             </div>
             <div className="relative mt-6">
-              <img src="/images/ai-script.jpg" alt="AI 腳本生成器" className="w-full h-56 object-cover opacity-90" loading="lazy"/>
+              <img src={`${B}images/ai-script.jpg`} alt="AI 腳本生成器" className="w-full h-56 object-cover opacity-90" loading="eager" decoding="async"/>
               <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
               <div className="absolute bottom-6 left-8 right-8">
                 <div className="bg-white/95 backdrop-blur rounded-xl p-4 shadow-lg">
