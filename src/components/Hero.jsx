@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { SLIDES } from '../data';
+import { useAuth } from '../auth';
 
-export default function Hero() {
+export default function Hero({ openAuth }) {
+  const { user } = useAuth();
+  const nav = useNavigate();
   const [active, setActive] = useState(0);
   const [role, setRole] = useState('creator');
 
@@ -92,7 +96,10 @@ export default function Hero() {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-12">
-          <button className="btn-primary-lg w-full sm:w-auto">立即加入</button>
+          <button
+            onClick={() => user ? nav('/dashboard') : openAuth?.('register')}
+            className="btn-primary-lg w-full sm:w-auto"
+          >{user ? '進入工作室' : '立即加入'}</button>
           <a href="#tiers" className="btn-secondary w-full sm:w-auto">
             查看獎金階梯
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 6l6 6-6 6"/></svg>
