@@ -16,7 +16,7 @@ export default function Footer() {
             <p className="mt-3 text-sm text-text-tertiary leading-relaxed">
               UGC marketplace · pay per real views
             </p>
-            <p className="mt-2 text-xs text-text-muted">
+            <p className="mt-2 text-xs text-text-tertiary">
               © 2026 Clipy AI. Clone 僅供學習。
             </p>
           </div>
