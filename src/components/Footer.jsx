@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-text-muted">
+          <p className="text-xs text-text-tertiary">
             本網站為 <a href="https://clipyai.app" className="text-brand-700 font-semibold underline underline-offset-2 hover:text-brand-800">clipyai.app</a> 的學習復刻作品，所有內容僅供教學用途。
           </p>
           <div className="flex gap-3 text-text-tertiary">
