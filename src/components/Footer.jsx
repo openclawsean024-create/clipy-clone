@@ -23,7 +23,7 @@ export default function Footer() {
 
           {/* Product */}
           <div>
-            <h4 className="text-sm font-bold text-text-primary mb-3">產品</h4>
+            <h3 className="text-sm font-bold text-text-primary mb-3">產品</h3>
             <ul className="space-y-2 text-sm text-text-tertiary">
               <li><a href="#features" className="hover:text-brand-600">功能</a></li>
               <li><a href="#tiers" className="hover:text-brand-600">獎金階梯</a></li>
@@ -34,7 +34,7 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="text-sm font-bold text-text-primary mb-3">資源</h4>
+            <h3 className="text-sm font-bold text-text-primary mb-3">資源</h3>
             <ul className="space-y-2 text-sm text-text-tertiary">
               <li><a href="#" className="hover:text-brand-600">部落格</a></li>
               <li><a href="#" className="hover:text-brand-600">創作者指南</a></li>
@@ -45,7 +45,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-sm font-bold text-text-primary mb-3">公司</h4>
+            <h3 className="text-sm font-bold text-text-primary mb-3">公司</h3>
             <ul className="space-y-2 text-sm text-text-tertiary">
               <li><a href="#" className="hover:text-brand-600">關於我們</a></li>
               <li><a href="#" className="hover:text-brand-600">聯絡我們</a></li>
@@ -57,7 +57,7 @@ export default function Footer() {
 
         <div className="mt-10 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-text-muted">
-            本網站為 <a href="https://clipyai.app" className="text-brand-600 hover:underline">clipyai.app</a> 的學習復刻作品，所有內容僅供教學用途。
+            本網站為 <a href="https://clipyai.app" className="text-brand-700 font-semibold underline underline-offset-2 hover:text-brand-800">clipyai.app</a> 的學習復刻作品，所有內容僅供教學用途。
           </p>
           <div className="flex gap-3 text-text-tertiary">
             <a href="#" aria-label="Twitter" className="hover:text-brand-600 transition">

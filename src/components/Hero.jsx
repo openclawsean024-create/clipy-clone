@@ -28,14 +28,14 @@ export default function Hero({ openAuth }) {
 
       <div className="container-clipy text-center">
         {/* 角色切換 pills */}
-        <div className="inline-flex items-center gap-1 p-1 rounded-full bg-slate-200/60 mb-6">
+        <div className="inline-flex items-center gap-1 p-1 rounded-full bg-slate-300/70 mb-6">
           <button
             onClick={() => setRole('creator')}
-            className={`px-4 py-1.5 rounded-full text-sm font-semibold transition ${role === 'creator' ? 'bg-white text-text-primary shadow-sm' : 'text-text-tertiary hover:text-text-primary'}`}
+            className={`px-4 py-1.5 rounded-full text-sm font-semibold transition ${role === 'creator' ? 'bg-white text-text-primary shadow-sm' : 'text-text-secondary hover:text-text-primary'}`}
           >我是創作者</button>
           <button
             onClick={() => setRole('brand')}
-            className={`px-4 py-1.5 rounded-full text-sm font-semibold transition ${role === 'brand' ? 'bg-white text-text-primary shadow-sm' : 'text-text-tertiary hover:text-text-primary'}`}
+            className={`px-4 py-1.5 rounded-full text-sm font-semibold transition ${role === 'brand' ? 'bg-white text-text-primary shadow-sm' : 'text-text-secondary hover:text-text-primary'}`}
           >我是品牌方</button>
         </div>
 
@@ -61,9 +61,12 @@ export default function Hero({ openAuth }) {
             <button
               key={i}
               onClick={() => setActive(i)}
-              className={`h-2 rounded-full transition-all ${i === active ? 'w-8 bg-text-primary' : 'w-2 bg-slate-300 hover:bg-slate-400'}`}
+              className={`h-6 w-6 rounded-full transition-all flex items-center justify-center ${i === active ? 'bg-transparent' : 'bg-transparent hover:bg-transparent'}`}
               aria-label={`Slide ${i+1}`}
-            />
+              aria-current={i === active ? 'true' : 'false'}
+            >
+              <span className={`block rounded-full ${i === active ? 'w-8 h-2 bg-text-primary' : 'w-2 h-2 bg-slate-300 hover:bg-slate-400'}`}/>
+            </button>
           ))}
         </div>
 
@@ -79,8 +82,11 @@ export default function Hero({ openAuth }) {
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
             {/* Play button overlay */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <button className="h-16 w-16 rounded-full bg-white/95 backdrop-blur flex items-center justify-center shadow-xl hover:scale-110 transition-transform">
-                <svg viewBox="0 0 24 24" className="h-7 w-7 text-brand-600 ml-1" fill="currentColor">
+              <button
+                aria-label="播放示範影片"
+                className="h-16 w-16 rounded-full bg-white/95 backdrop-blur flex items-center justify-center shadow-xl hover:scale-110 transition-transform focus:outline-none focus:ring-4 focus:ring-brand-300"
+              >
+                <svg viewBox="0 0 24 24" className="h-7 w-7 text-brand-700 ml-1" fill="currentColor" aria-hidden="true">
                   <path d="M8 5v14l11-7z"/>
                 </svg>
               </button>
